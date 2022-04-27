@@ -1,0 +1,31 @@
+.magnify {width: 300px; margin: 50px auto; position: relative;}
+
+/*Lets create the magnifying glass*/
+.large {
+	// width: 175px; height: 175px;
+	position: absolute;
+	border-radius: 100%;
+	
+	/*Multiple box shadows to achieve the glass effect*/
+	box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.85), 
+	0 0 7px 7px rgba(0, 0, 0, 0.25), 
+	inset 0 0 40px 2px rgba(0, 0, 0, 0.25);
+	
+	/*Lets load up the large image first*/
+	// background:red url('https://logotool-logo.javra.com/converted/52fb33b0-149f-438a-bd91-4688c86afe07/artCheck-1587625100921-debug_500.png') no-repeat;
+	// background: url('http://thecodeplayer.com/uploads/media/iphone.jpg') no-repeat;
+	pointer-events: none;
+	/*hide the glass by default*/
+	// display: none;
+}
+.large.visible{
+	// display: block;
+	// opacity: 1 ;
+}
+.large.hidden{
+// display: none;
+	// opacity: 0;
+}
+
+/*To solve overlap bug at the edges during magnification*/
+.small { display: block; }
